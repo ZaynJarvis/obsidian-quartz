@@ -10,4 +10,5 @@ title: Notes
 
 - [[AI Architects Course/AI Architects Course Index|AI Architects Course Index]]
 - [[AI Architects Course/AI Architects Phase A Index|AI Architects Phase A Index]]
+- [[AI Builders Course/AI Builders Course Index|AI Builders Course Index]]
 - [[Agentic AI Course/Agentic AI Course Index|Agentic AI Course Index]]

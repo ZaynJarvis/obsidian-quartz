@@ -7,39 +7,39 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: zaynjarvis.github.io/obsidian-quartz
+  baseUrl: obsidian.zaynjarvis.com
   ignorePatterns:
     - private
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
-    cdnCaching: true
+    fontOrigin: local
+    cdnCaching: false
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Source Serif 4
+      body: Source Serif 4
+      code: JetBrains Mono
     colors:
       lightMode:
-        light: "#fbfaf7"
-        lightgray: "#ebe6dc"
-        gray: "#b8b0a1"
-        darkgray: "#4f4a43"
-        dark: "#27231f"
-        secondary: "#356859"
-        tertiary: "#b65f4a"
-        highlight: rgba(182, 95, 74, 0.14)
-        textHighlight: "#fff23688"
+        light: "#f5f4ed"
+        lightgray: "#eceae0"
+        gray: "#8c8578"
+        darkgray: "#3d3d3a"
+        dark: "#1a1a1a"
+        secondary: "#1B365D"
+        tertiary: "#6b4c3b"
+        highlight: "#e4ecf5"
+        textHighlight: "#d0dce9"
       darkMode:
-        light: "#111315"
-        lightgray: "#2b3135"
-        gray: "#6d757b"
-        darkgray: "#d6d9d5"
-        dark: "#f0f2ec"
-        secondary: "#7db39f"
-        tertiary: "#d98972"
-        highlight: rgba(217, 137, 114, 0.16)
-        textHighlight: "#b3aa0288"
+        light: "#1a1917"
+        lightgray: "#242320"
+        gray: "#8c8578"
+        darkgray: "#e8e4da"
+        dark: "#f5f4ed"
+        secondary: "#7b9ec4"
+        tertiary: "#c9956b"
+        highlight: "#27384b"
+        textHighlight: "#3a3424"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true

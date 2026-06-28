@@ -1,3 +1,321 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+@font-face {
+  font-family: "TsangerJinKai02";
+  src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TsangerJinKai02";
+  src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+$serifStack:
+  Charter, Georgia, Palatino, "Times New Roman", "TsangerJinKai02", "Source Han Serif SC",
+  "Noto Serif CJK SC", "Songti SC", "STSong", serif;
+$monoStack:
+  "OV JetBrains Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+html {
+  font-synthesis-weight: none;
+  font-synthesis-style: none;
+}
+
+body {
+  font-family: $serifStack;
+  font-size: 17px;
+  line-height: 1.72;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: min(1540px, 100vw);
+}
+
+.page > #quartz-body {
+  column-gap: 18px;
+}
+
+.page > #quartz-body .sidebar {
+  color: var(--gray);
+  gap: 1rem;
+  padding-top: 4.6rem;
+}
+
+.page > #quartz-body .page-header {
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+thead,
+.page-title,
+.article-title,
+.folder-title,
+.breadcrumb-container {
+  font-family: $serifStack;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.page-title {
+  margin: 0;
+}
+
+.page-title a {
+  color: var(--secondary);
+  font-size: 1.52rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.article-title {
+  color: var(--dark);
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  font-weight: 500;
+  line-height: 1.14;
+  margin: 0.15rem 0 0.7rem;
+  text-wrap: balance;
+}
+
+.content-meta,
+.breadcrumb-container,
+.search-button,
+.explorer,
+.toc,
+.backlinks,
+.graph,
+footer {
+  font-family: $monoStack;
+}
+
+.content-meta,
+.breadcrumb-container,
+footer {
+  color: var(--gray);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+article {
+  font-family: $serifStack;
+  font-size: 1rem;
+  line-height: 1.76;
+}
+
+article p,
+article li {
+  line-height: 1.76;
+}
+
+article p {
+  margin: 1rem 0;
+}
+
+article > h1 {
+  font-size: 2rem;
+}
+
+article h2 {
+  border-top: 1px solid var(--lightgray);
+  margin-top: 2.6rem;
+  padding-top: 1.5rem;
+}
+
+article h2,
+article h3 {
+  color: var(--dark);
+}
+
+a.internal {
+  border: 1px solid color-mix(in srgb, var(--secondary) 16%, var(--lightgray));
+  border-radius: 4px;
+  padding: 0.02rem 0.25rem;
+  text-decoration: none;
+}
+
+a.internal:hover {
+  background: color-mix(in srgb, var(--secondary) 14%, var(--light));
+  color: var(--secondary);
+}
+
+a.external {
+  text-decoration-color: color-mix(in srgb, var(--secondary) 36%, transparent);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+blockquote {
+  border-left: 2px solid var(--secondary);
+  color: var(--gray);
+  margin: 1.4rem 0;
+  padding: 0.15rem 0 0.15rem 1rem;
+}
+
+code,
+pre,
+kbd {
+  font-family: $monoStack;
+  border-radius: 4px;
+}
+
+pre {
+  background: color-mix(in srgb, var(--lightgray) 74%, var(--light));
+  border-color: var(--lightgray);
+  box-shadow: none;
+}
+
+code {
+  border: 1px solid color-mix(in srgb, var(--lightgray) 72%, transparent);
+}
+
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  border-radius: 4px;
+  color: var(--gray);
+  font-family: $monoStack;
+}
+
+.table-container > table {
+  border: 1px solid var(--lightgray);
+  border-radius: 2px;
+  margin: 1.2rem 0;
+  overflow: hidden;
+}
+
+th {
+  border-bottom: 1px solid var(--gray);
+  color: var(--dark);
+  font-family: $monoStack;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-button,
+button,
+.darkmode,
+.readermode,
+.explorer-toggle,
+.toc-header {
+  border-radius: 999px;
+}
+
+.search-button,
+.darkmode,
+.readermode,
+.explorer-toggle {
+  background: color-mix(in srgb, var(--lightgray) 62%, var(--light));
+  border: 1px solid var(--lightgray);
+}
+
+.search-button {
+  padding: 0.34rem 0.68rem;
+}
+
+.explorer,
+.toc,
+.backlinks,
+.graph {
+  color: var(--gray);
+  font-size: 0.82rem;
+}
+
+.explorer a,
+.toc a,
+.backlinks a {
+  font-weight: 400;
+}
+
+.toc,
+.backlinks,
+.graph-outer,
+.global-graph-outer {
+  border-color: var(--lightgray);
+}
+
+.graph-outer,
+.global-graph-outer {
+  background: color-mix(in srgb, var(--lightgray) 45%, transparent);
+  border-radius: 2px;
+}
+
+.popover > .popover-inner {
+  background: var(--light);
+  border-color: var(--lightgray);
+  border-radius: 4px;
+  box-shadow: 0 12px 38px color-mix(in srgb, var(--dark) 14%, transparent);
+}
+
+img,
+audio,
+video,
+iframe.pdf {
+  border-radius: 4px;
+}
+
+hr,
+.footnotes,
+footer {
+  border-color: var(--lightgray);
+}
+
+footer {
+  margin-top: 2.4rem;
+  padding-top: 1rem;
+}
+
+:root[saved-theme="dark"] pre {
+  background: color-mix(in srgb, var(--lightgray) 58%, var(--light));
+}
+
+:root[saved-theme="dark"] .search-button,
+:root[saved-theme="dark"] .darkmode,
+:root[saved-theme="dark"] .readermode,
+:root[saved-theme="dark"] .explorer-toggle {
+  background: color-mix(in srgb, var(--lightgray) 54%, var(--light));
+}
+
+@media all and ($tablet) {
+  .page > #quartz-body .sidebar {
+    padding-top: 3rem;
+  }
+}
+
+@media all and ($mobile) {
+  body {
+    font-size: 16px;
+  }
+
+  .page > #quartz-body .sidebar {
+    padding-top: 1.25rem;
+  }
+
+  .page > #quartz-body .page-header {
+    margin-top: 1rem;
+  }
+
+  .article-title {
+    font-size: 2rem;
+  }
+
+  article h2 {
+    margin-top: 2.1rem;
+  }
+}
