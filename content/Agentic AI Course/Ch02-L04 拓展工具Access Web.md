@@ -54,33 +54,33 @@ def search(query, max_results=10):
 	"""
 	Search using DuckDuckGo and return results with URLs and text snippets.
 	Uses the HTML backend which has proven to be more reliable.
-    
+
 	Args:
     	query (str): Search query
     	max_results (int): Maximum number of results to return
 	"""
 	try:
     	print(f"DEBUG: Searching for query: {query}", file=sys.stderr)
-   	 
+
     	with DDGS() as ddgs:
         	results = list(ddgs.text(
             	query,
             	max_results=max_results,
             	backend='html'  # Use only the HTML backend
         	))
-       	 
+
         	if not results:
             	print("DEBUG: No results found", file=sys.stderr)
             	return
-       	 
+
         	print(f"DEBUG: Found {len(results)} results", file=sys.stderr)
-       	 
+
         	for i, r in enumerate(results, 1):
             	print(f"\n=== Result {i} ===")
             	print(f"URL: {r.get('link', r.get('href', 'N/A'))}")
             	print(f"Title: {r.get('title', 'N/A')}")
             	print(f"Snippet: {r.get('snippet', r.get('body', 'N/A'))}")
-           	 
+
 	except Exception as e:
     	print(f"ERROR: Search failed: {str(e)}", file=sys.stderr)
     	print(f"ERROR type: {type(e)}", file=sys.stderr)
@@ -92,7 +92,7 @@ def main():
 	parser.add_argument("query", help="Search query")
 	parser.add_argument("--max-results", type=int, default=10,
                   	help="Maximum number of results (default: 10)")
-    
+
 	args = parser.parse_args()
 	search(args.query, args.max_results)
 
@@ -120,7 +120,7 @@ Cursor 看到这段声明后，就相当于知道“我有一个叫 search_engin
 
 在试用的过程中，有些人可能会发现一个小插曲：因为 DuckDuckGo 的访问速度或者 API 限制，有时候会失败，也可能出现一些语义不匹配的结果。这个时候，AI 本身也有可能出现“翻车”——它拿到了无关的信息却误以为成功抓取了有价值内容。面对这种情况，如果你希望它能更稳一点，可以在脚本里增加简单的验证逻辑，比如当结果为空就返回一个特定的错误码，让 AI 看到报错后自我 debug。或者在 .cursorrules 里再写明一点：“若搜索结果无关，请尝试改换关键字或添加更多限定词语。”这样就能减少一些胡编乱造的概率。
 
-让 Cursor 用playwright把网页“爬”下来
+让 Cursor 用 playwright 把网页“爬”下来
 
 相比搜索更进一步的需求是，让 Cursor 针对特定网页做爬虫。也许你想抓取某个学术会议官网，把里面所有论文的标题和作者搜集起来；或者你想定期从某个在线商店收集商品信息，用来做价格比对和趋势分析——以前可能要写一堆爬虫脚本手工跑，现在就可以让 AI 来完成脚本编写，自己跑脚本执行，再解析结果整理成一个你需要的 Markdown。只要给它足够清晰的指令和工具描述，它就可以全自动地干完。
 

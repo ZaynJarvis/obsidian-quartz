@@ -55,8 +55,6 @@ Open WebUI 的安装配置非常简单，这里我们推荐使用 Docker 进行�
 
 下面的截图展示了一个使用 Open WebUI 进行对话的实例。可以看到，它的界面与 ChatGPT 非常相似。在网页的左上角可以选择模型，展开会话管理子菜单后，我们可以像在 ChatGPT 中一样查看历史会话和标题。此外，它还支持图片和附件，我们可以通过点击左下角的加号按钮，或者直接拖拽来上传图片或其他文件；右下角可以看到一个麦克风图标，这说明它也支持语音识别、文本转语音以及语音对话模式。
 
-
-
 仔细观察截图底部的对话输入框，我们可以发现它有一个独特的功能——智能自动补全。这一功能在 ChatGPT 中是没有的，它会根据你输入的内容建议后续文本。Open WebUI 还有许多类似的实用功能，我们将在下一节课中详细介绍。
 
 English Original
@@ -90,7 +88,5 @@ Of course, Ollama is just a backend tool for LLM reasoning, and using it through
 The installation configuration of Open WebUI is very simple, and here we recommend using Docker for installation. The Docker app can be downloaded from the official website https://www.docker.com/, and after installing Docker, running one line of command can basically run a local OpenWebUI instance. This command can be found on Open WebUI's official documentation page https://docs.openwebui.com/getting-started/quick-start. For experimental installations, we suggest the "Single-User Mode (Disabling Login)" mode. After starting the Docker container, accessing http://localhost:3000/ will show its graphical interface.
 
 The following screenshot shows an instance of chatting with Open WebUI. We can see that its interface is very similar to ChatGPT. In the upper left corner of the web page, you can choose models, and after expanding the conversation management submenu, we can view historical conversations and titles like ChatGPT. Additionally, it also supports images and attachments; we can upload images or other files by clicking on the plus sign in the lower left corner or drag and drop; and in the lower right corner, we can see a microphone icon, which means it also supports voice recognition, text-to-speech, and chat mode.
-
-
 
 Inspecting the chat dialogue box in the bottom of the screenshot closely, we can see that there is a unique feature which is intelligent auto-completion. This function is not available in ChatGPT and suggests subsequent content for your input words. Open WebUI has many more practical features like this, which will be introduced in detail in the next lesson.

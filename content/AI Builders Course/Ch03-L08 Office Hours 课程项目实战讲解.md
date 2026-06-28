@@ -26,25 +26,14 @@ Lesson 24 of 68
 
 最后更新：2026 年 5 月 7 日
 
-
-
-
 这是我们 Maven Office Hour 的录播。
 
-
-在最开始，我们演示了如何使用Codex。之后，我们简单介绍了 Builder Space。Builder Space 是我们随 AI Architect 课程一起提供的内容。如果你没有购买 AI Architect 课程，或者对 Builder Space 不感兴趣，可以直接跳过这一部分。
-
-
-
+在最开始，我们演示了如何使用 Codex。之后，我们简单介绍了 Builder Space。Builder Space 是我们随 AI Architect 课程一起提供的内容。如果你没有购买 AI Architect 课程，或者对 Builder Space 不感兴趣，可以直接跳过这一部分。
 
 English Original
 
 Last updated: May 7th, 2026
 
-
-
-
 This is the recording from our Maven Office Hour.
-
 
 At the very beginning, we walk through how to use Builder Space. Builder Space is something we offer as part of the AI Architect course. If you didn’t buy the AI Architect course or you’re not interested in Builder Space, feel free to skip this part.

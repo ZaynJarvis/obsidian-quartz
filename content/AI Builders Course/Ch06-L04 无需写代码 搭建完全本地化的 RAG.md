@@ -66,17 +66,9 @@ RAG 的功能配置同样围绕 Embedding 模型展开。具体设置位置在 A
 
 如果你不想每次都用快捷键来调出该对话框，也可以使用 Workspace 的 Model 功能。它仍然使用与上面相同的配置界面，但我们要进入 Models 选项卡而不是 Knowledge 选项卡。其配置界面如下图所示。这是一个非常灵活的工具，我们可以自定义一个个性化模型，为它预设一些背景知识和能力。对于我们当前的具体应用，最关键的部分是图中红框标出的配置项，即知识库的选择。在选择我们之前配置好的知识库后，使用该模型聊天时就会默认引用所选知识库，这在客服机器人等场景中非常有用。
 
-
-
-
-
 性能调优
 
 如果你对 RAG 生成的质量不满意，OpenWebUI 提供了强大的自定义能力，可进行更细致、更灵活的调整。这里我们回到之前的配置界面，如下图所示。其中，Hybrid Search 是一种针对大规模数据的优化方法。
-
-
-
-
 
 一些背景知识：现代搜索引擎通常将搜索过程分为两个步骤，一个称为 Retrieval（召回），一个称为 Ranking（排序）。Retrieval 步骤主要在大规模文档库上执行较粗粒度的检索操作。例如整个文档库可能有几十万甚至上百万篇文档，这一步会过滤掉所有不相关的内容，只留下几千或几百篇文档。
 
@@ -138,17 +130,9 @@ For example, in the screenshot above, we demonstrated creating a new knowledge b
 
 If you don’t want to use the shortcut key to bring up this dialog box every time, you can also use the Workspace’s Model feature. It still uses the same configuration interface as above, but we will enter the Models tab instead of the Knowledge tab. Its configuration interface is shown in the figure below. This is a very flexible tool where we can customize a personalized model, giving it some pre-set background knowledge and capabilities. For our specific application, the most critical part is the configuration option highlighted in the red rectangle, which is the selection of the knowledge base. After selecting the knowledge base we configured earlier, when chatting with this model, it will by default reference the selected knowledge base, which is very useful in scenarios such as customer service robots.
 
-
-
-
-
 Performance Tuning
 
 If you are not satisfied with the quality of the RAG generation, Open WebUI provides powerful customization for more detailed and flexible adjustments. Here we come back to the previous configuration interface, as shown in the figure below. Among them, Hybrid Search is a method for optimizing large-scale data.
-
-
-
-
 
 Some background knowledge: modern search engines often divide the search process into two steps: one called Retrieval, and one called Ranking. The Retrieval step mainly performs a rough retrieval operation on a large-scale document library. For example, the entire document library may have hundreds of thousands or even millions of documents. It will filter out all irrelevant content, leaving only a few thousand or a few hundred documents.
 

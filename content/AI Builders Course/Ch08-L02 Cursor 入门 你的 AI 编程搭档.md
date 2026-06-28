@@ -30,10 +30,6 @@ Cursor 入门：你的 AI 编程搭档 / Getting Started with Cursor: Your AI Co
 
 你会注意到它有着简洁的界面：一个专门的聊天面板，让你能够进行自然对话；一个 Composer 模式，用于处理更具编排性的任务；以及代码库搜索功能，帮助 Cursor 理解你的整个项目。当你第一次看到它自动补全函数或润色 docstring 时，你会意识到这绝非一个普通的代码片段生成器。它是一位会从你的提示、注释和代码结构中学习的 AI 助手，能以传统工具无法企及的方式提升你的工作效率。
 
-
-
-
-
 你输入一个请求——也许是“解释这个函数”或者“将这段代码重构得更高效”——然后看着 Cursor 给出建议，你可以随心选择接受、拒绝或修改。试用几分钟后，你会发现自己越来越少地依赖搜索引擎或文档页签，而是更多地依靠 Cursor 即时、贴合上下文的知识。
 
 当你逐渐熟悉这些基础用法后，会发现 Cursor 远不止是一个便捷的插件。它解锁了多种全新的编码方式：先是把注释转化为代码，然后通过完整的对话在更高层面塑造逻辑，最终走向更以目标为导向的模式——让 AI 真正成为一名能动的 Agent。这些不断演进的思维方式——面向注释的编程、面向提示的编程，以及面向目标的编程——将彻底改变你对开发的理解。很快，你就会发现自己不再停留于安装和快速修复，而是在人类的指引与 AI 的执行之间，体会到一种更为丰富的协同关系，并为后续所有课程奠定坚实基础。
@@ -43,10 +39,6 @@ English Original
 Imagine sitting down to code and having a quiet, steady-handed collaborator ready to offer thoughtful suggestions the moment you start typing. That’s what Cursor brings to your workflow. Think of it as a specialized AI pair programmer integrated right into your editor. Getting it up and running is straightforward: after installing it from https://www.cursor.com/, launch your editor and you’ll find the Cursor AI waiting. You won’t need to jump through hoops—just open a file, begin commenting or drafting your code, and see Cursor propose relevant completions.
 
 You’ll notice a sleek interface: a dedicated chat panel that lets you engage in natural dialogue, a composer mode for more orchestrated tasks, and codebase search features that help Cursor understand your entire project. The first time you see it autocomplete a function or refine a docstring, you’ll realize this isn’t a mere snippet generator. It’s an AI assistant that learns from your prompts, your comments, and your code structure, enhancing your productivity in a way traditional tools never could.
-
-
-
-
 
 You type in a request—maybe something like “Explain this function” or “Refactor this code to be more efficient”—and watch as Cursor responds with suggestions you can accept, reject, or modify at will. After a few minutes of experimenting, you’ll find yourself relying less on search engines or documentation tabs and more on Cursor’s immediate context-driven knowledge.
 

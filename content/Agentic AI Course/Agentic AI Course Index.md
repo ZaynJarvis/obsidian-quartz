@@ -10,13 +10,13 @@ videos: 7 (text transcripts preserved, video components skipped)
 
 ## 课程概览
 
-Superlinear Academy 的"Agentic AI的原理与实践"课程，共 3 章 18 节课。课程从 Agentic AI 的范式定义出发，经过 Cursor 工具的实操魔改，最终上升到产品形态与技术架构的系统思考。核心主线是：从"我问你答"到"我问你做"的范式飞跃，以及这一飞跃对个人工作流、团队协作和行业格局的冲击。
+Superlinear Academy 的"Agentic AI 的原理与实践"课程，共 3 章 18 节课。课程从 Agentic AI 的范式定义出发，经过 Cursor 工具的实操魔改，最终上升到产品形态与技术架构的系统思考。核心主线是：从"我问你答"到"我问你做"的范式飞跃，以及这一飞跃对个人工作流、团队协作和行业格局的冲击。
 
 ## 课程结构
 
 ### 第一章：Agentic AI 的定义、冲击与核心范式
 
-- [[Ch01-L00 引言]] — 课程开篇，18个月机会窗口 (视频课，含文字 transcript)
+- [[Ch01-L00 引言]] — 课程开篇，18 个月机会窗口 (视频课，含文字 transcript)
 - [[Ch01-L01 从我问你答到我说你做]] — ChatGPT → Copilot → Agentic AI 的代际演进 (视频课，含文字 transcript)
 - [[Ch01-L02 Agentic AI的范式转变]] — 从"回合制问答"到"递归式执行"的范式飞跃
 - [[Ch01-L03 三大核心特征]] — 工具调用、多步决策、自我检查迭代 (视频课，含文字 transcript)
@@ -30,7 +30,7 @@ Superlinear Academy 的"Agentic AI的原理与实践"课程，共 3 章 18 节�
 - [[Ch02-L02 因地制宜运用三种模式]] — 三种模式的实际选择与组合策略 (视频课，含文字 transcript)
 - [[Ch02-L03 cursorrules原理与自我进化]] — .cursorrules 作为 AI 的系统级记忆与自我进化机制 (视频课，含文字 transcript)
 - [[Ch02-L04 拓展工具Access Web]] — 给 Cursor 添加搜索与爬虫工具
-- [[Ch02-L05 对比Devin]] — 20美元 Cursor 魔改 vs 500美元 Devin 的能力对比
+- [[Ch02-L05 对比Devin]] — 20 美元 Cursor 魔改 vs 500 美元 Devin 的能力对比
 - [[Ch02-L06 Cursor配置教程]] — 从零开始的 Cursor + devin.cursorrules 配置教程
 
 ### 第三章：面向 Agentic AI 产品形态的思考与技术架构
@@ -48,6 +48,6 @@ Superlinear Academy 的"Agentic AI的原理与实践"课程，共 3 章 18 节�
 3. **角色转变**：人从"操作员"变成"AI Manager"，核心竞争力从写脚本转移到定义目标、设计验收标准、管理风险。
 4. **三种编程思维**：Comment-Oriented（小而快）、Prompt-Oriented（中等批量）、Objective-Oriented（端到端），因地制宜选用。
 5. **.cursorrules 是关键**：它是 AI 的系统级记忆和自我进化机制，让 Cursor 从编辑器变成 Agentic 平台。
-6. **20美元 vs 500美元**：通过 .cursorrules + 工具脚本 + Docker 隔离，Cursor 能实现 Devin 90% 的能力。
+6. **20 美元 vs 500 美元**：通过 .cursorrules + 工具脚本 + Docker 隔离，Cursor 能实现 Devin 90% 的能力。
 7. **产品形态变革**：从"固定菜单式工具"到"抽象能力自由组合"，AI 成为编排引擎而非计算电路。
 8. **反对框架先行**：Agentic AI 领域太新，框架的预设世界观会成为技术债和认知枷锁，应从第一性原理出发。

@@ -66,7 +66,7 @@ English Original
 
 Objective
 
-In this project, you will download all images from a specific public Instagram account, e.g. Yan's account: https://www.instagram.com/grapeot/. 
+In this project, you will download all images from a specific public Instagram account, e.g. Yan's account: https://www.instagram.com/grapeot/.
 
 Background and Context
 

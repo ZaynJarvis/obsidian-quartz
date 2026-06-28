@@ -32,8 +32,6 @@ Lesson 66 of 68
 
 一开始，Cursor 给人的感觉是一个专门的编码伙伴——集成在编辑器里的高级结对编程助手。但正如我们所见，它并不必局限于代码补全或重构任务。借助它理解上下文、遵循复杂指令、集成外部工具的能力，你可以把 Cursor 改造成一个通用 AI 接口。这样一来，你就不必再在浏览器端的聊天机器人（用于查资料）和本地 IDE 助手（用于写代码）之间来回切换，Cursor 可以成为你与各类 AI 驱动服务沟通的统一环境。
 
-
-
 只要配置得当、配套工具齐备，Cursor 就能抓取网络数据、分析文档，并产出超越当前代码库范围的洞察。这意味着当你需要：
 
 研究一个新的 API 或库时，
@@ -43,8 +41,6 @@ Lesson 66 of 68
 拉取公司文档库中的内容时，
 
 总结研究论文或文章时，
-
-
 
 你都不需要打开一堆标签页或把注意力转移到别处。在 .cursorrules 的引导以及自定义工具的加持下，Cursor 就变成了完成这些任务的指挥中心。最终带来的，是更加顺畅的工作流——洞察发现、编码、迭代都在同一个地方完成。
 
@@ -72,8 +68,6 @@ From Coding Partner to AI Hub
 
 Cursor initially feels like a specialized coding companion—an advanced pair programmer integrated into your editor. Yet as we’ve seen, it doesn’t have to remain confined to code completion or refactoring tasks. By building on its ability to understand context, follow complex instructions, and integrate with external tools, you can transform Cursor into a general-purpose AI interface. Instead of toggling between a browser-based chatbot for research and a local IDE assistant for coding, Cursor can become the single environment where you communicate with AI-driven services.
 
-
-
 With the right configuration and set of tools, Cursor can retrieve web data, analyze documents, and generate insights that go beyond the immediate codebase. This means that when you need to:
 
 Research a new API or library,
@@ -84,8 +78,6 @@ Pull in content from your company’s documentation repositories,
 
 Summarize research papers or articles,
 
-
-
 You don’t need to open multiple tabs or shift your attention elsewhere. Cursor—guided by your .cursorrules and enhanced by custom utilities—becomes the command center for these tasks. The end result is a more seamless workflow, where insight discovery, coding, and iteration all happen in the same place.
 
 By embracing this broader view, you stop thinking of Cursor as just a code finisher and start seeing it as a flexible partner. One moment, it’s helping you write and optimize functions. The next moment, it’s summarizing a blog post or analyzing the results of a complex search query. This convergence encourages more fluid thinking about development tasks. Rather than constantly switching mental contexts—now coding, now researching, now reading docs—you can move fluidly within one environment, guided by AI.
@@ -94,7 +86,7 @@ Knowledge Management and Continuous Improvement
 
 As you use Cursor as a general AI entry point, you’ll also find natural opportunities to build a richer knowledge ecosystem. Files created to support AI-driven tasks—like notes on best practices, summaries of past research, or logs of frequently referenced queries—can be kept locally. Over time, these serve as living knowledge repositories that Cursor can draw upon. With each iteration, you provide more context and tools, and Cursor’s suggestions become increasingly aligned with how you prefer to think and work. The AI environment evolves into a personalized knowledge engine that streamlines your entire workflow.
 
-This approach isn’t limited to software engineering. Consider team members who aren’t developers: technical writers, product managers, UX designers, or analysts. While they may not need code completions, they might still benefit from AI-driven insights, document retrieval, or summarization tools. By configuring Cursor in a way that caters to their tasks—perhaps connecting it to knowledge bases, support tickets, or user feedback logs—Cursor can become a universal assistant for the entire team, offering value well beyond code generation. 
+This approach isn’t limited to software engineering. Consider team members who aren’t developers: technical writers, product managers, UX designers, or analysts. While they may not need code completions, they might still benefit from AI-driven insights, document retrieval, or summarization tools. By configuring Cursor in a way that caters to their tasks—perhaps connecting it to knowledge bases, support tickets, or user feedback logs—Cursor can become a universal assistant for the entire team, offering value well beyond code generation.
 
 For example, the screenshot below shows how Cursor helped analyze my blog (used as the codebase here) to summarize how my attitude on GPT changed over time. The result can be further easily inserted as a doc, and becomes part of the knowledge base.
 

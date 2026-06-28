@@ -9,7 +9,7 @@ total_sections: 8
 # AI Architects 课程总索引
 
 > 课程地址：https://www.superlinear.academy/c/aa
-> 课程全名：AI Architects：构建AI复利系统，持续快速落地深度AI项目，吃到时代红利
+> 课程全名：AI Architects：构建 AI 复利系统，持续快速落地深度 AI 项目，吃到时代红利
 
 ## 课程概述
 

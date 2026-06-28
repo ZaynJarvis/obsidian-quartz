@@ -56,10 +56,6 @@ Agent 的实现
 
 然而，OpenWebUI 采用了完全不同的设计。在配置时，我们只需要直接提供其核心的 Python 实现。至于数据准备、调用、理解 LLM 的结果、调用工具，以及把结果再次输入给 API，所有这些都由 OpenWebUI 来处理，整个过程对我们是透明的。
 
-
-
-
-
 例如，让我们来看上图中的计算器示例。这一实现只需要 10 行代码，其核心在第 9 行，调用 Python 的 eval 函数对输入的数学表达式进行计算，并在第 10 行返回结果。这一核心之外的部分主要以 docstring 的形式存在，向 AI 提供更多上下文，帮助它理解何时以及以何种格式调用这个函数。例如，calculate 函数的 DocString 明确说明了它的用途是计算一些数学表达式，以及输入和输出的含义与格式。
 
 第 10 行也很有讲究；这里返回的并不是简单的结果，而是给 LLM 的一段说明。这个返回值会作为 LLM 下一轮生成的提示词的一部分。换句话说，在为 OpenWebUI 定义好这个计算器之后，后台会发生以下事情：
@@ -80,29 +76,13 @@ Agent 的部署与使用
 
 部署并启用一个工具之后，在与 LLM 聊天时，OpenWebUI 聊天框左下方的加号按钮上会出现一个复选框。当我们启用该工具时，它就会把相关信息作为 AI 输入的一部分，告诉 LLM 它可以调用这个工具。
 
-
-
-
-
 例如，当我们没有启用该工具时，用 QWen2.5 计算 12345 x 87654，会得到错误的结果（正确结果应为 1,082,088,630），如上图所示。
 
 但如下图所示，当我们启用该工具后，它就能给出正确的结果。
 
-
-
-
-
-
-
-
-
 如上图所示，这里有一个有趣的点：LLM 还提到这个结果与 calculator 工具有关。它为什么会提到这一点？因为在我们的返回值（代码第 10 行）中，告诉了它“可以提及结果来自 calculator 工具”。这一步无论是对调试，还是帮助用户理解数据来源，都很有帮助。
 
 除了用提示词来实现这种可见性之外，另一种方法是使用 citations。例如，下面这段代码在执行时，会在答案底部把来源显示为某个具体的工具，类似于 RAG 的效果，这对于追溯来源和验证可靠性非常重要。
-
-
-
-
 
 Agent 的安全考量
 
@@ -144,10 +124,6 @@ Actually Agents are not entirely new. Existing commercial models already support
 
 However, OpenWebUI uses a completely different design. During configuration, we only need to provide its core Python implementation directly. As for data preparation, invocation, understanding the LLM's results, calling tools, and further input to the API, all of this is handled by OpenWebUI. The entire process is transparent to us.
 
-
-
-
-
 For example, let's look at the calculator example shown in the image above. This implementation only requires 10 lines of code, the core of which is line 9, where it calls Python's eval function to compute the input mathematical expression, and in line 10, it returns the result. The parts outside this core are mainly in the form of docstrings, providing more context to the AI, helping it understand when and in what format to call this function. For instance, the DocString of the calculate function clearly states its purpose is to compute some mathematical expressions, and what the input and output meanings and formats are.
 
 Line 10 is also meaningful; here, it does not return a simple result but an explanation for the LLM. This return value will be used as part of the prompt for the next round of generation by the LLM. In other words, after defining this calculator for OpenWebUI, the following things happen in the background:
@@ -168,29 +144,13 @@ To deploy the calculator we just wrote, simply go to the Workspace → Tools tab
 
 After deploying and enabling a tool, when chatting with the LLM, a checkbox will appear on the plus button at the bottom left of the OpenWebUI chat box. When we enable this tool, it will include the relevant information as part of the AI input, informing the LLM that it can invoke this tool.
 
-
-
-
-
 For example, when we do not enable this tool, using QWen2.5 to calculate 12345 x 87654, it gives an incorrect result (the correct result should be 1,082,088,630), as shown in the image above.
 
 But as shown in the image below, when we enable this tool, it gives us the correct result.
 
-
-
-
-
-
-
-
-
 As shown above, there is an interesting point: the LLM also mentions that this result is related to the calculator tool. Why does it mention this? Because in our return value (line 10 of the code), we told it that you can mention that it comes from the calculator tool. This step is helpful both for debugging and for user understanding of where the data comes from.
 
 In addition to using prompts to achieve this visibility, another method is to use citations. For example, the code below, when executed, will display its source as a specific tool at the bottom of the answer, similar to RAG, which is important for tracing and verifying reliability.
-
-
-
-
 
 Security Considerations for Agents
 

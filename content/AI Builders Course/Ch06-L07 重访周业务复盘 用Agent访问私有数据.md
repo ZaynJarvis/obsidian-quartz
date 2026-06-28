@@ -58,10 +58,6 @@ Lesson 51 of 68
 
 这里跳过了配置过程，因为我们的 Agent 默认会从课程网站下载示例数据。如果你使用的是第三方 Agent，则需要配置相应的 URL，或手动下载并复制到 Open WebUI 中。
 
-
-
-
-
 配置好聊天窗口后，我们就可以直接与 AI 对话，针对具体数据库提问。例如上图所示，我们首先询问该数据库中有哪些数据表，AI 正确回答有一个 events 表；继续询问该表有哪些字段及类型时，它也能正确作答。这说明 LLM 已经轻松地与我们的私有数据打通了。
 
 这段对话背后发生的事情是：我们通过 Agent 向 LLM 提供了三个工具。第一个问题调用了列出所有数据表的工具，第二个问题调用了列出指定表数据格式的工具。每次回答的最后一行会显示具体调用了哪个工具。这里我们没有一步步替它收集信息，而是 LLM 自己用工具完成了回答。此外，由于 LLM 部署在本地，所有数据都留在我们自己的机器上。
@@ -91,10 +87,6 @@ Lesson 51 of 68
 第二，构建 Agent 本身依然相当耗时。这里因为我自己写了 SQLite Agent，或者别人写了，我们才能直接复用。然而复用并不像看上去那么简单，它有一个前提：大家要遵守相同的约定或接口。但目前业内并没有公认的统一协议，因此 Agent 的构建以及复用、共享仍存在很大的不确定性。
 
 下面来看一个例子，看看 Claude 是如何解决这两个问题的。这里使用的是 Claude Desktop App。我们通过类似上一节的机制接入了一个 SQLite 访问 Agent，并基于该 Agent 直接发出一个一步到位的请求：“Can you explore the database, and plot how the number of events change over different dates?”
-
-
-
-
 
 如上图所示，可以看到 Claude 自主调用了多个工具。和我们在前一个例子中一步步引导的过程一样，它先列出该数据库中的所有数据表，再探查 events 表的格式，编写并执行 SQL 查询，最后通过 React 进行可视化。整个过程没有任何停顿或干预（除了出于安全要求的用户确认）。AI 完全自主地完成了规划与决策，并取得了与上一种方法相同的结果。
 
@@ -150,10 +142,6 @@ After deploying our SQLite access agent, we can run ollama pull llama3.2:3b in 
 
 We've skipped the configuration process here because our agent will download example data from our course website by default. If you're using a third-party agent, you'll need to configure the URL or manually download and copy it into Open WebUI.
 
-
-
-
-
 After configuring the chat window, we can directly converse with AI and ask questions about specific databases. For example, as shown above, when we first ask what data tables are in this database, AI correctly answers that there's an events table. When asked about what columns and types are in this table, it can also answer correctly. This shows that LLM has easily connected with our private data.
 
 What's happening behind the scenes in this chat is that we provided three tools to LLM through the agent. Here, the first question calls the tool that lists all data tables, while the second question calls the tool that lists the data format of a specific data table. Which tool was called is shown in the last line of each answer. Here, we didn't help it collect information step by step; instead, LLM used tools to answer independently. Additionally, since LLM is deployed locally, all our data stays on our own machine.
@@ -183,10 +171,6 @@ First, this AI still makes single-round decisions. In other words, AI only moves
 Second, building agents itself is still quite time-consuming. Here, because I wrote the SQLite agent, or someone else wrote it, we could directly reuse it. However, reuse isn't as simple as it looks; it has a prerequisite that everyone follows the same conventions or interfaces. But currently, there isn't an industry-standard protocol, so the construction and reuse sharing of agents still face great uncertainty.
 
 Let's look at an example here to see how Claude solves these two problems. Here we're using the Claude Desktop App. We connected a SQLite Access Agent through a mechanism similar to the previous section. Based on the agent, we directly make a one-step request: "Can you explore the database, and plot how the number of events change over different dates?"
-
-
-
-
 
 As shown above, we can see Claude independently called multiple tools. Like we guided in the previous example, it first listed all data tables in this database, then explored the format of the events table, wrote and executed SQL queries, and finally visualized through React. The entire process had no pauses or interventions (except for user confirmations required for security). AI completely conducted autonomous planning, autonomous decision-making, and achieved the same results as our previous method.
 
