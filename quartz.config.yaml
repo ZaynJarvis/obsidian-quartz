@@ -100,6 +100,14 @@ plugins:
     order: 92
   - source: github:quartz-community/fonts
     enabled: true
+    options:
+      useThemeFonts: false
+      fontOrigin: local
+      title: 'Charter, Georgia, Palatino, "Times New Roman", "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif'
+      header: 'Charter, Georgia, Palatino, "Times New Roman", "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif'
+      body: 'Charter, Georgia, Palatino, "Times New Roman", "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif'
+      code: '"OV JetBrains Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+      interface: '"OV JetBrains Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish

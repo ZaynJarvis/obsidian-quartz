@@ -13,6 +13,15 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
       <script
         dangerouslySetInnerHTML={{
           __html: `
+          (function() {
+            var legacyPrefix = "/obsidian-quartz";
+            var pathname = window.location.pathname;
+            if (pathname === legacyPrefix || pathname.startsWith(legacyPrefix + "/")) {
+              var target = pathname.slice(legacyPrefix.length) || "/";
+              window.location.replace(target + window.location.search + window.location.hash);
+            }
+          })();
+
           if (typeof fetchData !== "undefined") {
             fetchData.then(function(index) {
               var basePath = document.body.dataset.basepath || "";

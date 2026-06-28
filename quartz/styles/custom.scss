@@ -39,21 +39,41 @@ body {
 }
 
 .page {
-  max-width: min(1540px, 100vw);
+  max-width: min(1320px, calc(100vw - 48px));
 }
 
 .page > #quartz-body {
-  column-gap: 18px;
+  grid-template-columns: 260px minmax(0, 720px) 240px;
+  column-gap: 44px;
+  justify-content: center;
 }
 
 .page > #quartz-body .sidebar {
   color: var(--gray);
   gap: 1rem;
-  padding-top: 4.6rem;
+  padding: 5.2rem 0 2rem;
+}
+
+.page > #quartz-body .left.sidebar {
+  border-right: 1px solid color-mix(in srgb, var(--lightgray) 82%, transparent);
+  padding-right: 1.35rem;
+}
+
+.page > #quartz-body .right.sidebar {
+  border-left: 1px solid color-mix(in srgb, var(--lightgray) 82%, transparent);
+  padding-left: 1.35rem;
+}
+
+.page > #quartz-body .center,
+.page > #quartz-body footer {
+  min-width: 0;
+  width: 100%;
+  max-width: 720px;
 }
 
 .page > #quartz-body .page-header {
   border-bottom: 1px solid var(--lightgray);
+  margin-top: 5.2rem;
   padding-bottom: 1.25rem;
 }
 
@@ -79,17 +99,19 @@ thead,
 
 .page-title a {
   color: var(--secondary);
-  font-size: 1.52rem;
+  display: inline-block;
+  font-size: 1.32rem;
   font-weight: 500;
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 .article-title {
   color: var(--dark);
-  font-size: clamp(2rem, 4vw, 3.45rem);
+  font-size: clamp(2.25rem, 5vw, 4.4rem);
   font-weight: 500;
-  line-height: 1.14;
-  margin: 0.15rem 0 0.7rem;
+  line-height: 1.06;
+  margin: 0.15rem 0 0.9rem;
   text-wrap: balance;
 }
 
@@ -114,7 +136,7 @@ footer {
 
 article {
   font-family: $serifStack;
-  font-size: 1rem;
+  font-size: 1.06rem;
   line-height: 1.76;
 }
 
@@ -124,7 +146,12 @@ article li {
 }
 
 article p {
-  margin: 1rem 0;
+  margin: 1.08rem 0;
+  max-width: 68ch;
+}
+
+article > .markdown-preview-view > h1:first-child {
+  display: none;
 }
 
 article > h1 {
@@ -143,15 +170,28 @@ article h3 {
 }
 
 a.internal {
-  border: 1px solid color-mix(in srgb, var(--secondary) 16%, var(--lightgray));
-  border-radius: 4px;
-  padding: 0.02rem 0.25rem;
-  text-decoration: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  text-decoration-color: color-mix(in srgb, var(--secondary) 34%, transparent);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 a.internal:hover {
-  background: color-mix(in srgb, var(--secondary) 14%, var(--light));
+  background: transparent;
   color: var(--secondary);
+  text-decoration-thickness: 2px;
+}
+
+a.internal.tag-link {
+  background: var(--highlight);
+  border: 1px solid color-mix(in srgb, var(--secondary) 16%, var(--lightgray));
+  border-radius: 999px;
+  padding: 0.02rem 0.45rem;
+  text-decoration: none;
 }
 
 a.external {
@@ -229,6 +269,10 @@ button,
   padding: 0.34rem 0.68rem;
 }
 
+.search-button p {
+  font-size: 0.86rem;
+}
+
 .explorer,
 .toc,
 .backlinks,
@@ -241,6 +285,21 @@ button,
 .toc a,
 .backlinks a {
   font-weight: 400;
+}
+
+.explorer .folder-title,
+.explorer .nav-file-title {
+  line-height: 1.45;
+}
+
+.explorer .folder-container,
+.explorer .nav-file-title {
+  border-radius: 4px;
+}
+
+.explorer .folder-container:hover,
+.explorer .nav-file-title:hover {
+  background: color-mix(in srgb, var(--lightgray) 58%, transparent);
 }
 
 .toc,
@@ -293,8 +352,22 @@ footer {
 }
 
 @media all and ($tablet) {
+  .page {
+    max-width: min(1120px, calc(100vw - 32px));
+  }
+
+  .page > #quartz-body {
+    grid-template-columns: 240px minmax(0, 760px);
+    column-gap: 32px;
+  }
+
   .page > #quartz-body .sidebar {
     padding-top: 3rem;
+  }
+
+  .page > #quartz-body .right.sidebar {
+    border-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -303,8 +376,28 @@ footer {
     font-size: 16px;
   }
 
+  .page {
+    max-width: 100vw;
+  }
+
+  .page > #quartz-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .page > #quartz-body .sidebar {
     padding-top: 1.25rem;
+  }
+
+  .page > #quartz-body .left.sidebar,
+  .page > #quartz-body .right.sidebar {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-title a {
+    font-size: 1.18rem;
+    white-space: nowrap;
   }
 
   .page > #quartz-body .page-header {
@@ -312,10 +405,19 @@ footer {
   }
 
   .article-title {
-    font-size: 2rem;
+    font-size: 2.55rem;
+    line-height: 1.1;
+  }
+
+  article {
+    font-size: 1.02rem;
   }
 
   article h2 {
     margin-top: 2.1rem;
+  }
+
+  .graph {
+    display: none;
   }
 }
